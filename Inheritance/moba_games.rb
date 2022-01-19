@@ -1,4 +1,4 @@
-require "/home/philipe/Desktop/Object_Orientation/Abstration/LeagueOfLegends.rb"
+require "../Abstration/LeagueOfLegends.rb"
 
 class Dota < Characters
   def up_skill
@@ -7,7 +7,7 @@ class Dota < Characters
     puts "What skill do want to up?"
     skill_up = gets.chomp
 
-    if skill_up == "Q" || skill_up == "q" 
+    if skill_up == "Q" || skill_up == "q"
       puts "Congrats, your #{skill_up} skill is stronger!"
     elsif skill_up == "W" || skill_up == "w"
       puts "Your #{skill_up} skill has been upgraded!"

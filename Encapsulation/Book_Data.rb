@@ -13,9 +13,15 @@ attr_reader :value, :year
     puts "Title of the book is #{@name}, year #{@year} and it costs $#{@value}."
   end
 
+  def year=(new_year)
+    if(new_year>=0)
+      @year = new_year
+    end
+  end
+
   private
   def discount(value)
-    if @year < 2000
+    if year < 2000
       value * 0.9
     else
       value
@@ -26,6 +32,7 @@ end
 
 book_1 = Book_store.new("The Lord of the Rings",2000,15.00)
 book_2 = Book_store.new("The war of the worlds",1897,30.00)
-
+book_1.year = -3892
+book_2.year = 3892
 book_1.book_data
 book_2.book_data

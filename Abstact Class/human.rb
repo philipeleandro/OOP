@@ -21,3 +21,4 @@ class Human
     raise "not implemented, this class is abstract"
   end
 end
+
